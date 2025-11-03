@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import labHeroImage from "@/assets/lab-hero.jpg";
 
 const Hero = () => {
@@ -28,14 +29,16 @@ const Hero = () => {
           and track lab equipment — preventing conflicts and keeping everyone informed.
         </p>
         
-        <Button 
-          size="lg" 
-          className="text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all animate-fade-in"
-          style={{ animationDelay: '0.3s' }}
-        >
-          Get Started
-          <ArrowRight className="ml-2" />
-        </Button>
+        <Link to="/auth">
+          <Button 
+            size="lg" 
+            className="text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all animate-fade-in"
+            style={{ animationDelay: '0.3s' }}
+          >
+            Get Started
+            <ArrowRight className="ml-2" />
+          </Button>
+        </Link>
       </div>
     </section>
   );
